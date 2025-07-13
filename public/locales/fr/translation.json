@@ -1,0 +1,77 @@
+{
+  "name": "Mehdi Hilmi",
+  "title": "Ingénieur Recherche & Développement",
+  "about": [
+    "Développeur Full-Stack créatif et passionné par l'IA, spécialisé dans la création d'applications intelligentes, évolutives et centrées sur l'utilisateur.",
+    "Avec une solide formation en informatique et une expérience pratique dans le développement web et l'IA de pointe, je transforme des problèmes complexes en solutions élégantes.",
+    "Mon travail comble le fossé entre une architecture back-end robuste et des expériences front-end intuitives, avec un accent particulier sur l'exploitation des grands modèles de langage pour construire la prochaine génération de logiciels."
+  ],
+  "contact": {
+    "email": "contact.hilmi.mehdi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mehdi-hilmi/"
+  },
+  "approach": {
+    "title": "Mon Approche",
+    "items": [
+      { "title": "Conception Centrée Utilisateur", "description": "Je crois que la technologie doit être intuitive et accessible. Je priorise la compréhension des besoins des utilisateurs pour créer des produits qui ne sont pas seulement fonctionnels, mais aussi agréables à utiliser." },
+      { "title": "Agile & Collaboratif", "description": "Je m'épanouis dans les environnements agiles, en adoptant le développement itératif et la communication ouverte. Je considère le travail d'équipe comme essentiel pour construire les meilleurs produits." },
+      { "title": "Code Propre & Évolutif", "description": "J'écris du code maintenable, efficace et bien documenté. Construire pour l'avenir signifie créer des systèmes robustes et faciles à étendre." },
+      { "title": "Apprentissage Continu", "description": "Le monde de la technologie est en constante évolution, et moi aussi. J'explore constamment de nouveaux outils, frameworks et concepts d'IA pour rester à la pointe de l'innovation." }
+    ]
+  },
+  "skills": {
+    "title": "Compétences Clés",
+    "categories": {
+      "languages_databases": "Langages & Bases de données",
+      "frameworks_libraries": "Frameworks & Librairies",
+      "ai_ml": "IA & Machine Learning",
+      "concepts_tools": "Concepts & Outils"
+    },
+    "items": {
+      "languages_databases": ["Python", "PHP", "JavaScript", "MySQL", "MongoDB", "FAISS", "ChromaDB", "Elastic Search"],
+      "frameworks_libraries": ["React.js", "Next.js", "Symfony", "Laravel", "Doctrine", "Tailwind", "FastAPI"],
+      "ai_ml": ["Intelligence Artificielle (IA)", "Grands Modèles de Langage (LLM)", "LangChain", "Systèmes RAG"],
+      "concepts_tools": ["Git", "MVC", "Scrum", "APIs REST"]
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "items": [
+      { "role": "Ingénieur Recherche et Développement", "company": "Tamtam International", "period": "Sept 2024 - Présent", "description": "Direction d'initiatives R&D axées sur des solutions basées sur l'IA. Architecture et mise en œuvre de systèmes RAG et exploitation des LLM pour améliorer les fonctionnalités des produits." },
+      { "role": "Stagiaire Recherche et Développement", "company": "Tamtam International", "period": "Fév 2024 - Août 2024", "description": "Contribution au développement de prototypes d'IA en utilisant Python et LangChain. Expérience pratique avec des bases de données vectorielles comme FAISS et ChromaDB." },
+      { "role": "Développeur Web", "company": "Escalar Media", "period": "Mai 2022 - Juin 2022", "description": "Développement et maintenance d'applications web full-stack avec le framework Symfony et React.js, en se concentrant sur des interfaces utilisateur réactives." },
+      { "role": "Développeur Web", "company": "Ménara Holding", "period": "Fév 2022 - Avr 2022", "description": "Création de pages et de composants web dynamiques pour des projets internes et clients en utilisant PHP et JavaScript." }
+    ]
+  },
+  "projects": {
+    "title": "Projets Notables",
+    "items": [
+      { "title": "Système de Q&R Intelligent", "description": "Développement d'un système RAG avancé qui fournit des réponses précises en effectuant des recherches dans une vaste base de connaissances, en utilisant une base de données vectorielle pour la recherche sémantique et un LLM pour des réponses de type humain.", "tech": ["Python", "FastAPI", "LangChain", "FAISS", "LLM"] },
+      { "title": "Plateforme E-commerce Dynamique", "description": "Une application de commerce électronique full-stack avec un front-end moderne basé sur des composants et un back-end robuste, avec gestion des produits, authentification des utilisateurs et un processus de paiement simplifié.", "tech": ["Symfony", "React.js", "MySQL", "API REST"] },
+      { "title": "Tableau de Bord de Gestion de Projet", "description": "Un outil collaboratif pour les équipes afin de gérer les tâches et les projets, conçu en mettant l'accent sur les mises à jour en temps réel et une interface utilisateur intuitive pour un flux de travail fluide.", "tech": ["Laravel", "React.js", "Bootstrap", "PHP"] }
+    ],
+    "tech_stack": "Stack Technique"
+  },
+  "education": {
+    "title": "Formation",
+    "items": [
+      { "degree": "Master, Informatique", "institution": "Université de Picardie Jules Vernes", "period": "2024 - 2025" },
+      { "degree": "Master, Informatique", "institution": "ESMA Marrakech", "period": "2022 - 2024" },
+      { "degree": "Licence, Informatique", "institution": "ESMA Marrakech", "period": "2021 - 2022" },
+      { "degree": "DTS, Informatique", "institution": "ISGI", "period": "2019 - 2021" }
+    ]
+  },
+  "certification": {
+    "title": "Certification",
+    "value": "Certificat d'Anglais EF SET 76/100 (C2 Compétent)"
+  },
+  "footer": {
+    "title": "Construisons Quelque Chose d'Incroyable",
+    "description": "Je suis actuellement disponible pour de nouvelles opportunités et collaborations. Si vous avez un projet en tête ou si vous souhaitez simplement échanger, n'hésitez pas à me contacter.",
+    "copyright": "© {{year}} Mehdi Hilmi. Réalisé avec React & Tailwind CSS."
+  },
+  "buttons": {
+    "email_me": "Envoyez-moi un e-mail",
+    "linkedin": "LinkedIn"
+  }
+} 
