@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useRef, Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useParams, useNavigate, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
 
 // --- ICONS (using SVG for self-containment) ---
 const MailIcon = (props) => (
@@ -27,6 +25,47 @@ const StarIcon = (props) => (
 const CompassIcon = (props) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
 );
+
+// --- PORTFOLIO DATA ---
+const portfolioData = {
+  name: "Mehdi Hilmi",
+  title: "Research & Development Engineer",
+  about: "A creative Full-Stack Developer and AI enthusiast, passionate about building intelligent, scalable, and user-centric applications. With a strong foundation in computer science and hands-on experience in both web development and cutting-edge AI, I transform complex problems into elegant solutions. My work bridges the gap between robust back-end architecture and intuitive front-end experiences, with a special focus on leveraging Large Language Models to build the next generation of software.",
+  contact: {
+    email: "contact.hilmi.mehdi@gmail.com",
+    linkedin: "https://www.linkedin.com/in/mehdi-hilmi/",
+  },
+  approach: [
+      { title: "User-Centric Design", description: "I believe technology should be intuitive and accessible. I prioritize understanding user needs to build products that are not just functional, but delightful to use." },
+      { title: "Agile & Collaborative", description: "I thrive in agile environments, embracing iterative development and open communication. I see teamwork as essential to building the best products." },
+      { title: "Clean & Scalable Code", description: "I write maintainable, efficient, and well-documented code. Building for the future means creating systems that are robust and easy to extend." },
+      { title: "Continuous Learning", description: "The tech world is always evolving, and so am I. I am constantly exploring new tools, frameworks, and AI concepts to stay at the forefront of innovation." },
+  ],
+  skills: {
+    "Languages & Databases": ["Python", "PHP", "JavaScript", "MySQL", "MongoDB", "FAISS", "ChromaDB", "Elastic Search"],
+    "Frameworks & Libraries": ["React.js", "Next.js", "Symfony", "Laravel", "Doctrine", "Tailwind", "FastAPI"],
+    "AI & Machine Learning": ["Artificial Intelligence (AI)", "Large Language Models (LLM)", "LangChain", "RAG Systems"],
+    "Concepts & Tools": ["Git", "MVC", "Scrum", "REST APIs"],
+  },
+  experience: [
+    { role: "Research And Development Engineer", company: "Tamtam International", period: "Sept 2024 - Present", description: "Leading R&D initiatives focusing on AI-driven solutions. Architecting and implementing RAG systems and leveraging LLMs to enhance product features." },
+    { role: "Research And Development Intern", company: "Tamtam International", period: "Feb 2024 - Aug 2024", description: "Contributed to the development of AI prototypes using Python and LangChain. Gained hands-on experience with vector databases like FAISS and ChromaDB." },
+    { role: "Web Developer", company: "Escalar Media", period: "May 2022 - Jun 2022", description: "Developed and maintained full-stack web applications using the Symfony framework and React.js, focusing on responsive UIs." },
+    { role: "Web Developer", company: "Ménara Holding", period: "Feb 2022 - Apr 2022", description: "Built dynamic web pages and components for internal and client-facing projects using PHP and JavaScript." },
+  ],
+  projects: [
+    { title: "Intelligent Q&A System", description: "Developed an advanced RAG system that provides accurate answers by searching a vast knowledge base, using a vector database for semantic search and an LLM for human-like responses.", tech: ["Python", "FastAPI", "LangChain", "FAISS", "LLM"] },
+    { title: "Dynamic E-commerce Platform", description: "A full-stack e-commerce application with a modern, component-based front-end and a robust back-end, featuring product management, user auth, and a streamlined checkout.", tech: ["Symfony", "React.js", "MySQL", "REST API"] },
+    { title: "Project Management Dashboard", description: "A collaborative tool for teams to manage tasks and projects, built with a focus on real-time updates and an intuitive user interface for a seamless workflow.", tech: ["Laravel", "React.js", "Bootstrap", "PHP"] },
+  ],
+  education: [
+    { degree: "Master's degree, Computer Science", institution: "University of Picardie Jules Vernes", period: "2024 - 2025" },
+    { degree: "Master's degree, Computer Science", institution: "ESMA Marrakech", period: "2022 - 2024" },
+    { degree: "Bachelor's degree, Computer Science", institution: "ESMA Marrakech", period: "2021 - 2022" },
+    { degree: "DTS, Computer Science", institution: "ISGI", period: "2019 - 2021" },
+  ],
+  certification: "EF SET English Certificate 76/100 (C2 Proficient)"
+};
 
 // --- HOOKS ---
 
@@ -161,32 +200,29 @@ const AnimatedSection = ({ children }) => {
 };
 
 const Header = () => {
-    const { t } = useTranslation();
-    const typedTitle = useTypingEffect(t('title'), 70);
+    const typedTitle = useTypingEffect(portfolioData.title, 70);
     return (
         <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-900/80 to-transparent"></div>
             <div className="relative z-10">
                 <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-4">
-                    {t('name')}
+                    {portfolioData.name}
                 </h1>
                 <p className="text-xl md:text-2xl text-teal-400 font-mono h-8">
                     {typedTitle}
                     <span className="animate-ping">_</span>
                 </p>
-                <div className="mt-6 max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed space-y-4">
-                   {t('about', { returnObjects: true }).map((paragraph, index) => (
-                       <p key={index}>{paragraph}</p>
-                   ))}
-                </div>
+                <p className="mt-6 max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
+                   {portfolioData.about}
+                </p>
                 <div className="mt-8 flex justify-center items-center space-x-6">
-                    <a href={`mailto:${t('contact.email')}`} className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
+                    <a href={`mailto:${portfolioData.contact.email}`} className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
                         <MailIcon className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-                        <span className="font-semibold">{t('buttons.email_me')}</span>
+                        <span className="font-semibold">Email Me</span>
                     </a>
-                    <a href={t('contact.linkedin')} target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
+                    <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
                         <LinkedinIcon className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-                        <span className="font-semibold">{t('buttons.linkedin')}</span>
+                        <span className="font-semibold">LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -220,15 +256,7 @@ const TimelineItem = ({ item, icon }) => {
     );
 };
 
-function Portfolio() {
-    const { t } = useTranslation();
-    const portfolioData = {
-        skills: t('skills.items', { returnObjects: true }),
-        experience: t('experience.items', { returnObjects: true }),
-        projects: t('projects.items', { returnObjects: true }),
-        education: t('education.items', { returnObjects: true }),
-        approach: t('approach.items', { returnObjects: true }),
-    }
+export default function App() {
     return (
         <div className="bg-gray-900 text-gray-200 font-sans relative">
             <Starfield />
@@ -237,7 +265,7 @@ function Portfolio() {
                 
                 <main className="container mx-auto px-4 py-16 space-y-24">
                     <AnimatedSection>
-                        <SectionTitle icon={CompassIcon}>{t('approach.title')}</SectionTitle>
+                        <SectionTitle icon={CompassIcon}>My Approach</SectionTitle>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {portfolioData.approach.map(item => (
                                 <div key={item.title} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700 hover:border-teal-400 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300 transform hover:-translate-y-1">
@@ -249,11 +277,11 @@ function Portfolio() {
                     </AnimatedSection>
 
                     <AnimatedSection>
-                        <SectionTitle icon={BrainCircuitIcon}>{t('skills.title')}</SectionTitle>
+                        <SectionTitle icon={BrainCircuitIcon}>Core Skills</SectionTitle>
                         <div className="space-y-6">
                             {Object.entries(portfolioData.skills).map(([category, skillsList]) => (
                                 <div key={category} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700">
-                                    <h3 className="font-semibold text-teal-400 mb-4 text-lg">{t(`skills.categories.${category}`)}</h3>
+                                    <h3 className="font-semibold text-teal-400 mb-4 text-lg">{category}</h3>
                                     <div className="flex flex-wrap gap-3">
                                         {skillsList.map(skill => (
                                             <span key={skill} className="bg-gray-700 text-gray-200 text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 hover:bg-teal-500 hover:text-gray-900 cursor-default">{skill}</span>
@@ -265,7 +293,7 @@ function Portfolio() {
                     </AnimatedSection>
                     
                     <AnimatedSection>
-                        <SectionTitle icon={CodeIcon}>{t('projects.title')}</SectionTitle>
+                        <SectionTitle icon={CodeIcon}>Featured Projects</SectionTitle>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {portfolioData.projects.map(project => (
                                 <div key={project.title} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/20 hover:border-teal-400/50 transform hover:-translate-y-2">
@@ -274,7 +302,7 @@ function Portfolio() {
                                         <p className="text-gray-300 mb-4 flex-grow">{project.description}</p>
                                     </div>
                                     <div className="p-6 bg-gray-900/50 border-t border-gray-700 group-hover:border-teal-400/30 transition-colors duration-300">
-                                        <h4 className="text-sm font-semibold text-teal-400 mb-2">{t('projects.tech_stack')}</h4>
+                                        <h4 className="text-sm font-semibold text-teal-400 mb-2">Tech Stack</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {project.tech.map(t => (
                                                 <span key={t} className="bg-teal-900/70 text-teal-300 text-xs font-medium px-2.5 py-0.5 rounded-full">{t}</span>
@@ -289,19 +317,19 @@ function Portfolio() {
                     <AnimatedSection>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
                             <div>
-                                <SectionTitle icon={BriefcaseIcon}>{t('experience.title')}</SectionTitle>
+                                <SectionTitle icon={BriefcaseIcon}>Experience</SectionTitle>
                                 <div className="relative border-l-2 border-teal-400/30 ml-3">
                                     {portfolioData.experience.map(exp => <TimelineItem key={exp.role+exp.company} item={exp} icon={BriefcaseIcon} />)}
                                 </div>
                             </div>
                             <div>
-                                <SectionTitle icon={GraduationCapIcon}>{t('education.title')}</SectionTitle>
+                                <SectionTitle icon={GraduationCapIcon}>Education</SectionTitle>
                                 <div className="relative border-l-2 border-teal-400/30 ml-3">
                                     {portfolioData.education.map(edu => <TimelineItem key={edu.degree} item={edu} icon={GraduationCapIcon} />)}
                                 </div>
                                 <div className="mt-12">
-                                    <h3 className="font-bold text-white text-xl flex items-center gap-3 mb-2"><StarIcon className="w-6 h-6 text-yellow-400"/>{t('certification.title')}</h3>
-                                    <p className="text-gray-300">{t('certification.value')}</p>
+                                    <h3 className="font-bold text-white text-xl flex items-center gap-3 mb-2"><StarIcon className="w-6 h-6 text-yellow-400"/>Certification</h3>
+                                    <p className="text-gray-300">{portfolioData.certification}</p>
                                 </div>
                             </div>
                         </div>
@@ -309,55 +337,19 @@ function Portfolio() {
                 </main>
 
                 <footer className="text-center py-12 px-4 relative z-10 border-t border-gray-800">
-                    <h2 className="text-3xl font-bold text-white mb-4">{t('footer.title')}</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">Let's Build Something Amazing</h2>
                     <p className="text-gray-400 max-w-xl mx-auto mb-8">
-                        {t('footer.description')}
+                        I'm currently available for new opportunities and collaborations. If you have a project in mind or just want to connect, feel free to reach out.
                     </p>
                     <div className="flex justify-center items-center space-x-6">
-                        <a href={`mailto:${t('contact.email')}`} className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
+                        <a href={`mailto:${portfolioData.contact.email}`} className="group flex items-center space-x-2 text-teal-400 hover:text-white transition-colors duration-300 bg-teal-400/10 hover:bg-teal-400/20 px-4 py-2 rounded-lg">
                             <MailIcon className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-                            <span className="font-semibold">{t('contact.email')}</span>
+                            <span className="font-semibold">contact.hilmi.mehdi@gmail.com</span>
                         </a>
                     </div>
-                     <p className="mt-12 text-gray-500">{t('footer.copyright', { year: new Date().getFullYear() })}</p>
+                     <p className="mt-12 text-gray-500">&copy; {new Date().getFullYear()} Mehdi Hilmi. Crafted with React & Tailwind CSS.</p>
                 </footer>
             </div>
         </div>
     );
 }
-
-const LanguageWrapper = () => {
-  const { lang } = useParams();
-  const navigate = useNavigate();
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    if (lang && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
-    }
-  }, [lang, i18n]);
-
-  return <Portfolio />;
-};
-
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex justify-center items-center bg-gray-900">
-    <svg className="animate-spin h-10 w-10 text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-    </svg>
-  </div>
-);
-
-const App = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/:lang" element={<LanguageWrapper />} />
-        <Route path="/" element={<Navigate to="/en" replace />} />
-      </Routes>
-    </Suspense>
-  );
-};
-
-export default App;
