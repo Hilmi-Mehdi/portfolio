@@ -1,0 +1,77 @@
+{
+  "name": "Mehdi Hilmi",
+  "title": "Research & Development Engineer",
+  "about": [
+    "A creative Full-Stack Developer and AI enthusiast, passionate about building intelligent, scalable, and user-centric applications.",
+    "With a strong foundation in computer science and hands-on experience in both web development and cutting-edge AI, I transform complex problems into elegant solutions.",
+    "My work bridges the gap between robust back-end architecture and intuitive front-end experiences, with a special focus on leveraging Large Language Models to build the next generation of software."
+  ],
+  "contact": {
+    "email": "contact.hilmi.mehdi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mehdi-hilmi/"
+  },
+  "approach": {
+    "title": "My Approach",
+    "items": [
+      { "title": "User-Centric Design", "description": "I believe technology should be intuitive and accessible. I prioritize understanding user needs to build products that are not just functional, but delightful to use." },
+      { "title": "Agile & Collaborative", "description": "I thrive in agile environments, embracing iterative development and open communication. I see teamwork as essential to building the best products." },
+      { "title": "Clean & Scalable Code", "description": "I write maintainable, efficient, and well-documented code. Building for the future means creating systems that are robust and easy to extend." },
+      { "title": "Continuous Learning", "description": "The tech world is always evolving, and so am I. I am constantly exploring new tools, frameworks, and AI concepts to stay at the forefront of innovation." }
+    ]
+  },
+  "skills": {
+    "title": "Core Skills",
+    "categories": {
+      "languages_databases": "Languages & Databases",
+      "frameworks_libraries": "Frameworks & Libraries",
+      "ai_ml": "AI & Machine Learning",
+      "concepts_tools": "Concepts & Tools"
+    },
+    "items": {
+      "languages_databases": ["Python", "PHP", "JavaScript", "MySQL", "MongoDB", "FAISS", "ChromaDB", "Elastic Search"],
+      "frameworks_libraries": ["React.js", "Next.js", "Symfony", "Laravel", "Doctrine", "Tailwind", "FastAPI"],
+      "ai_ml": ["Artificial Intelligence (AI)", "Large Language Models (LLM)", "LangChain", "RAG Systems"],
+      "concepts_tools": ["Git", "MVC", "Scrum", "REST APIs"]
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      { "role": "Research And Development Engineer", "company": "Tamtam International", "period": "Sept 2024 - Present", "description": "Leading R&D initiatives focusing on AI-driven solutions. Architecting and implementing RAG systems and leveraging LLMs to enhance product features." },
+      { "role": "Research And Development Intern", "company": "Tamtam International", "period": "Feb 2024 - Aug 2024", "description": "Contributed to the development of AI prototypes using Python and LangChain. Gained hands-on experience with vector databases like FAISS and ChromaDB." },
+      { "role": "Web Developer", "company": "Escalar Media", "period": "May 2022 - Jun 2022", "description": "Developed and maintained full-stack web applications using the Symfony framework and React.js, focusing on responsive UIs." },
+      { "role": "Web Developer", "company": "Ménara Holding", "period": "Feb 2022 - Apr 2022", "description": "Built dynamic web pages and components for internal and client-facing projects using PHP and JavaScript." }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      { "title": "Intelligent Q&A System", "description": "Developed an advanced RAG system that provides accurate answers by searching a vast knowledge base, using a vector database for semantic search and an LLM for human-like responses.", "tech": ["Python", "FastAPI", "LangChain", "FAISS", "LLM"] },
+      { "title": "Dynamic E-commerce Platform", "description": "A full-stack e-commerce application with a modern, component-based front-end and a robust back-end, featuring product management, user auth, and a streamlined checkout.", "tech": ["Symfony", "React.js", "MySQL", "REST API"] },
+      { "title": "Project Management Dashboard", "description": "A collaborative tool for teams to manage tasks and projects, built with a focus on real-time updates and an intuitive user interface for a seamless workflow.", "tech": ["Laravel", "React.js", "Bootstrap", "PHP"] }
+    ],
+    "tech_stack": "Tech Stack"
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      { "degree": "Master's degree, Computer Science", "institution": "University of Picardie Jules Vernes", "period": "2024 - 2025" },
+      { "degree": "Master's degree, Computer Science", "institution": "ESMA Marrakech", "period": "2022 - 2024" },
+      { "degree": "Bachelor's degree, Computer Science", "institution": "ESMA Marrakech", "period": "2021 - 2022" },
+      { "degree": "DTS, Computer Science", "institution": "ISGI", "period": "2019 - 2021" }
+    ]
+  },
+  "certification": {
+    "title": "Certification",
+    "value": "EF SET English Certificate 76/100 (C2 Proficient)"
+  },
+  "footer": {
+    "title": "Let's Build Something Amazing",
+    "description": "I'm currently available for new opportunities and collaborations. If you have a project in mind or just want to connect, feel free to reach out.",
+    "copyright": "© {{year}} Mehdi Hilmi. Crafted with React & Tailwind CSS."
+  },
+  "buttons": {
+    "email_me": "Email Me",
+    "linkedin": "LinkedIn"
+  }
+} 
