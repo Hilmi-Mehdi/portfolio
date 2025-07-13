@@ -13,13 +13,14 @@ i18n
     detection: {
       order: ['path', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
       caches: ['cookie'],
+      lookupFromPathIndex: 1
     },
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: '/portfolio/locales/{{lng}}/translation.json',
     },
     react: {
       useSuspense: true,
     },
   });
 
-export default i18n; 
+export default i18n;
