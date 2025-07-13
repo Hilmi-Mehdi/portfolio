@@ -1,11 +1,7 @@
 {
   "name": "Mehdi Hilmi",
   "title": "Ingénieur Recherche & Développement",
-  "about": [
-    "Développeur Full-Stack créatif et passionné par l'IA, spécialisé dans la création d'applications intelligentes, évolutives et centrées sur l'utilisateur.",
-    "Avec une solide formation en informatique et une expérience pratique dans le développement web et l'IA de pointe, je transforme des problèmes complexes en solutions élégantes.",
-    "Mon travail comble le fossé entre une architecture back-end robuste et des expériences front-end intuitives, avec un accent particulier sur l'exploitation des grands modèles de langage pour construire la prochaine génération de logiciels."
-  ],
+  "about": "Développeur Full-Stack créatif et passionné par l'IA, spécialisé dans la création d'applications intelligentes, évolutives et centrées sur l'utilisateur. Avec une solide formation en informatique et une expérience pratique dans le développement web et l'IA de pointe, je transforme des problèmes complexes en solutions élégantes. Mon travail comble le fossé entre une architecture back-end robuste et des expériences front-end intuitives, avec un accent particulier sur l'exploitation des grands modèles de langage pour construire la prochaine génération de logiciels.",
   "contact": {
     "email": "contact.hilmi.mehdi@gmail.com",
     "linkedin": "https://www.linkedin.com/in/mehdi-hilmi/"

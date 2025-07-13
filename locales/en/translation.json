@@ -1,11 +1,7 @@
 {
   "name": "Mehdi Hilmi",
   "title": "Research & Development Engineer",
-  "about": [
-    "A creative Full-Stack Developer and AI enthusiast, passionate about building intelligent, scalable, and user-centric applications.",
-    "With a strong foundation in computer science and hands-on experience in both web development and cutting-edge AI, I transform complex problems into elegant solutions.",
-    "My work bridges the gap between robust back-end architecture and intuitive front-end experiences, with a special focus on leveraging Large Language Models to build the next generation of software."
-  ],
+  "about": "A creative Full-Stack Developer and AI enthusiast, passionate about building intelligent, scalable, and user-centric applications. With a strong foundation in computer science and hands-on experience in both web development and cutting-edge AI, I transform complex problems into elegant solutions. My work bridges the gap between robust back-end architecture and intuitive front-end experiences, with a special focus on leveraging Large Language Models to build the next generation of software.",
   "contact": {
     "email": "contact.hilmi.mehdi@gmail.com",
     "linkedin": "https://www.linkedin.com/in/mehdi-hilmi/"
